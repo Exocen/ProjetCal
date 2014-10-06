@@ -34,7 +34,7 @@ presentation_n2s3.synctex.gz
 .ensime_lucene/
 .ensime_cache/
 .idea/
-.old_modx
+
 
 ## Directory to avoid
 project/boot/
@@ -44,6 +44,9 @@ target/
 /logs
 tmp/
 auto/
+old_modx/
+
+
 different_presentations/presentation/code/*.tex
 _region_.tex
 slides_n2s3.vrb
