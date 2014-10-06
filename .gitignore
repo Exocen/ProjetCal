@@ -44,7 +44,7 @@ target/
 /logs
 tmp/
 auto/
-old_modx/
+
 
 
 different_presentations/presentation/code/*.tex

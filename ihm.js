@@ -63,15 +63,35 @@ var metamodel=root.ProjetCal;
 var model=Shell.selectModel(metamodel);
 var factory=model.__PageObjects;
 var pages=factory.__contents;
-
+//var layouts=factory.__ButtonObjects;
 //var path=factory.__contents;
 //var dir=chooseFileForSave("html");
 //var fichier=createContent();
+ var layouts=model.__LayoutObjects.__contents;
+for (var index2 in layouts){
+		print("layouts = "+layouts[index2].__name);
+		var pagesi = layouts[index2].layouts;
+		for (var i_layouts in pagesi){
+		print("knb");
+		print("wut ? = "+pagesi[i_layouts].__name);
+	} 
+	}
+
 for (var index in pages){
+	
 	print("Creation = "+pages[index].__name);
 	var fichier = createContent();
-	fichier.addLine("<!DOCTYPE html><html><head><title>"+pages[index].__name+"</title></head><body></body></html>");
+	var body="";
+	var layouts=pages[index].layouts;
+	//print("thefuc ?"+layouts);
+	for (var i_layouts in layouts){
+		print("knb");
+		print("wut ? = "+layouts[i_layouts].__name);
+	} 
+	fichier.addLine("<!DOCTYPE html><html><head><title>"+pages[index].__name+"</title></head><body>"+body+"</body></html>");
 	
-	fichier.writeInFile("./tmp/"+pages[index].__name+".html");}
+	fichier.writeInFile("./tmp/"+pages[index].__name+".html");
+	
+	}
 	
 print("Done");            
