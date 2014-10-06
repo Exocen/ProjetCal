@@ -34,6 +34,7 @@ presentation_n2s3.synctex.gz
 .ensime_lucene/
 .ensime_cache/
 .idea/
+.old_modx
 
 ## Directory to avoid
 project/boot/
