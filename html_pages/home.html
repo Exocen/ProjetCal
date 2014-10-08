@@ -62,13 +62,24 @@
     </style>
 
 
+
   </head>
 
   <body>
     <p class="verti">
       Bienvenue sur le site
     </p>
+    <form action="#" method="POST">
+      <input type="text" value="toto"/> <input type="text" value="titi"> <button>reset</button>
+      <p>Texte à l'intérieur du formulaire</p>
+    </form>
     <button>Coucou ! </button>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+      $("button").click(function(){
+      $("input").is("[type=text]").val("");
+      });
+    </script>
   </body>
 
 </html>
